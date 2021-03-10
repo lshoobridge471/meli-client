@@ -3,7 +3,7 @@ import loadable from '@loadable/component';
 
 export const LoadingComponent = <div>Loading...</div>;
 
-export const IndexSection = loadable(() => import(/* webpackChunkName: "IndexSection" */'./sections/index/index'), {
+export const IndexSection = loadable(() => import(/* webpackChunkName: "IndexSection" */'./sections/index/index.container'), {
     fallback: LoadingComponent,
 });
 
