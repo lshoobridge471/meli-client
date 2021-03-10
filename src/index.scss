@@ -1,3 +1,37 @@
-h1 {
-    color: $color-red;
+// VARS
+$color-meli: #fff159;
+$color-gray: #ebebeb;
+$color-gray2: #666;
+$color-gray3: #eaeaea;
+$color-white: #FFF;
+$color-black: #000;
+// Libraries
+@import 'antd/dist/antd';
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+
+// Styles
+@import './sections/items/items.scss';
+@import './main-app.scss';
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: "Proxima Nova"
+    ,-apple-system
+    ,"Helvetica Neue"
+    ,Helvetica
+    ,Roboto
+    ,Arial
+    ,sans-serif
+    ,sans-serif;
+    background-color: $color-gray;
+}
+
+a {
+    color: $color-black;
+    &:hover {
+        color: $color-gray2;
+    }
 }

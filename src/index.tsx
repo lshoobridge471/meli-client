@@ -1,10 +1,15 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import './index.scss';
+import * as React from 'react';
+import { render } from 'react-dom';
+import { HashRouter } from 'react-router-dom';
+import { querySelector } from 'utils/utils';
+import MainApp from './main-app';
+import './index.scss'
 
-const App = () => <h1>React Typescript App: {CONFIG.ENVIRONMENT}</h1>
+const rootElement = querySelector('#root');
 
-ReactDOM.render(
-	<App />,
-  	document.getElementById("root")
+render(
+	<HashRouter>
+		<MainApp />
+	</HashRouter>,
+	rootElement
 );

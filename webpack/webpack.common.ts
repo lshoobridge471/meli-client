@@ -26,18 +26,9 @@ export const common: Configuration = {
             {
                 loader: 'sass-loader',
                 options: {
-                    sourceMap: true,
+                    sourceMap: true
                 }
-            },
-            {
-                loader: 'sass-resources-loader',
-                options: {
-                    resources: [
-                        // The second parameter of the resolve method is the address of the scss configuration file. If there are more than one, just add them one by one.
-                        resolve(__dirname, './../src/theme.scss')
-                    ]
-                }
-            },
+            }
         ]
     },
     {
@@ -85,6 +76,8 @@ export const common: Configuration = {
     new DefinePlugin({
         CONFIG: {
             ENVIRONMENT: JSON.stringify(process.env.ENVIRONMENT),
+            API_URL: JSON.stringify(process.env.API_URL),
+            PRODUCTS_LIST_LIMIT: JSON.stringify(process.env.PRODUCTS_LIST_LIMIT),
         },
     }),
     new HtmlWebPackPlugin({
