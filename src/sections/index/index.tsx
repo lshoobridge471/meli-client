@@ -1,5 +1,5 @@
 import * as React from 'react';
 
-const IndexSection = () => <></>;
+const IndexSection: React.FunctionComponent = () => <></>;
 
 export default IndexSection;

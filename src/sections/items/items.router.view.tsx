@@ -4,7 +4,7 @@ import ItemDetailContainer from './detail/item-detail.container';
 import ItemSearchContainer from './search/item-search.container';
 
 export interface IItemsRoutesViewProps {
-    match: match<{}>
+    match: match;
 }
 
 const ItemsRoutesView: React.FunctionComponent<IItemsRoutesViewProps> = (props: IItemsRoutesViewProps) => {
