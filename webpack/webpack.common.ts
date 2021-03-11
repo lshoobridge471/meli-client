@@ -58,7 +58,7 @@ export const common: Configuration = {
     ]
   },
   output: {
-    path: resolve(__dirname, "../dist"),
+    path: resolve(__dirname, "../build"),
     filename: "[name].[chunkhash].bundle.js",
     chunkFilename: "[name].[chunkhash].bundle.js",
     publicPath: '/'
@@ -91,7 +91,7 @@ export const common: Configuration = {
         patterns: [
             {
                 from: join(__dirname, '../src/assets/favicon.ico'),
-                to: join(__dirname, '../dist'),
+                to: join(__dirname, '../build'),
             }
         ]
     }),

@@ -3,7 +3,7 @@
 		"target": "esnext",
 		"module": "commonjs",
 		"lib": ["es2019", "dom"],
-		"outDir": "./dist/",
+		"outDir": "./build/",
 		"jsx": "react",
 		"moduleResolution": "node",
 		"rootDirs": ["src"],
