@@ -50,6 +50,9 @@ PRODUCTS_LIST_LIMIT=5 # Cantidad de productos para mostrar en la busqueda.
 npm run dev
 ```
 El mismo leera las variables de entorno que estan en el archivo .env
+Abrira un servidor con HTTPS en el host 0.0.0.0 y el puerto 3000.
+
+Para acceder: ```https://0.0.0.0:3000/```
 
 ### Ejecutar tests
 ```bash
