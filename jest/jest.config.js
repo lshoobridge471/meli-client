@@ -16,6 +16,7 @@ module.exports = {
         '\\.svg$': '<rootDir>/../jest/svgrMock.js',
         '\\.png$': '<rootDir>/../jest/fileMock.js',
         '\\.css$': '<rootDir>/../jest/fileMock.js',
+        '^components/(.*)$': '<rootDir>/components/$1',
         '^sections/(.*)$': '<rootDir>/sections/$1',
         '^utils/(.*)$': '<rootDir>/utils/$1',
         '^hooks/(.*)$': '<rootDir>/hooks/$1',

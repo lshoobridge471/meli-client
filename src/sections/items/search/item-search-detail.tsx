@@ -9,21 +9,19 @@ const ItemSearchDetail: React.FunctionComponent<IItemsData> = (props: IItemsData
     const uniqueKey = getProductUniqueKey(props);
     const formattedAmount = formatMoney(amount);
     return (
-        <>
-            <div className="Items--Results--Card" key={uniqueKey}>
-                <div className="Items--Results--Card--Image">
-                    <img src={picture} />
+        <div className="Items--Results--Card" key={uniqueKey}>
+            <div className="Items--Results--Card--Image">
+                <img src={picture} />
+            </div>
+            <div className="Items--Results--Card--Content">
+                <div className="Items--Results--Card--Content--Subtitle">
+                    <Link to={`/items/${id}`}>{title}</Link>
                 </div>
-                <div className="Items--Results--Card--Content">
-                    <div className="Items--Results--Card--Content--Subtitle">
-                        <Link to={`/items/${id}`}>{title}</Link>
-                    </div>
-                    <div className="Items--Results--Card--Content--Title">
-                        {formattedAmount}
-                    </div>
+                <div className="Items--Results--Card--Content--Title">
+                    {formattedAmount}
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

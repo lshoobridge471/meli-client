@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { IItemsData } from '../types/types';
-import ItemListDetail from './item-search-detail';
+import ItemSearchDetail from './item-search-detail';
 
 export interface IItemSearchResults {
     items: IItemsData[];
@@ -10,8 +10,10 @@ const ItemSearchResults: React.FunctionComponent<IItemSearchResults> = (props: I
     const { items } = props;
     const filteredItems: IItemsData[] = (CONFIG.PRODUCTS_LIST_LIMIT) ? items.slice(0, CONFIG.PRODUCTS_LIST_LIMIT) : items;
     return (
-        <div className="Items--Results">
-            {filteredItems.map((item: IItemsData): React.ReactElement => <ItemListDetail key={item.id} {...item} />)}
+        <div className="Items--Results" key={items.length}>
+            {filteredItems.map((item: IItemsData): React.ReactElement => {
+                return <ItemSearchDetail key={item.id} {...item} />;
+            })}
         </div>
     );
 };

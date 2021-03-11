@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { IItemsData } from '../types/types';
 import { Button, notification } from 'antd';
+
 import { formatMoney, getProductConditionName } from '../utils/utils';
 
 export interface IItemDetailProps {
@@ -47,7 +48,7 @@ const ItemDetailView: React.FunctionComponent<IItemDetailProps> = (props: IItemD
                 {description && (
                     <div className="Item--Detail--Description">
                         <h1>Descripcion</h1>
-                        {description}
+                        <span>{description}</span>
                     </div>
                 )}
             </div>

@@ -1,13 +1,13 @@
-import { IBreadcumbSectionProps } from "components/breadcumb/breadcumb";
+import { IBreadcumbSectionProps } from "../../../components/breadcumb/breadcumb";
 import { IConditions } from "../types/types";
 
-const conditions: IConditions = {
+export const conditions: IConditions = {
     'used': 'Usado',
-    'new': 'Nuevo',
+    'new': 'Nuevo'
 };
 
 // Get product condition name
-export const getProductConditionName = (condition: keyof IConditions): string => conditions[condition];
+export const getProductConditionName = (condition: 'used' | 'new'): string => conditions[condition];
 
 // Function to format money currency.
 export const formatMoney = (value: number | bigint, decimals?: number) => {
