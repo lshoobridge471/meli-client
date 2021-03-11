@@ -1,7 +1,8 @@
 # meli-client
 
 WebApp creada con NodeJS basada en Typescript que consume datos de la API de MercadoLibre.
-El sitio busca productos y detalle de productos conectando a la API desarrollada para este proyecto: ```https://github.com/lshoobridge471/meli-api```
+
+El sitio busca productos y detalle de productos conectando a la API desarrollada para este proyecto: ```https://github.com/lshoobridge471/meli-api``` (por lo tanto es obligatorio clonar el otro proyecto y ejecutarlo)
 
 El sitio contiene las siguientes caracteristicas instaladas:
 
@@ -38,7 +39,7 @@ Crear una copia con el nombre ```.env``` y configurar lo que creamos necesario:
 
 ```bash
 ENVIRONMENT=development # Entorno (development/production)
-API_URL=http://localhost:8080 # URL de la api.
+API_URL=http://localhost:8080 # URL donde tenemos levantado el proyecto la API.
 PRODUCTS_LIST_LIMIT=5 # Cantidad de productos para mostrar en la busqueda.
 ```
 
