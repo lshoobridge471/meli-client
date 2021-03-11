@@ -20,6 +20,6 @@ export const formatMoney = (value: number | bigint, decimals?: number) => {
 };
 
 // Parse array string into a Breadcumb array string
-export const parseBreadcumbStrings = (strings: string[]): IBreadcumbSectionProps[] => strings.map((item: string) => {
+export const parseBreadcumbStrings = (strings: string[]): IBreadcumbSectionProps[] => (strings?.length) ? strings.map((item: string) => {
     return { name: item } as IBreadcumbSectionProps;
-});
+}) : [];

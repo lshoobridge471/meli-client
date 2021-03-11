@@ -11,7 +11,7 @@ const ItemSearchResults: React.FunctionComponent<IItemSearchResults> = (props: I
     const filteredItems: IItemsData[] = (CONFIG.PRODUCTS_LIST_LIMIT) ? items.slice(0, CONFIG.PRODUCTS_LIST_LIMIT) : items;
     return (
         <div className="Items--Results" key={items.length}>
-            {filteredItems.map((item: IItemsData): React.ReactElement => {
+            {filteredItems.length && filteredItems.map((item: IItemsData): React.ReactElement => {
                 return <ItemSearchDetail key={item.id} {...item} />;
             })}
         </div>

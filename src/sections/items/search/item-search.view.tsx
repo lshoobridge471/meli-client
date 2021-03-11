@@ -14,7 +14,7 @@ const ItemSearchView: React.FunctionComponent<IItemsViewProps> = (props: IItemsV
     return (
         <>
             {categories && <ItemSearchCategories categories={categories} />}
-            {items && <ItemSearchResults items={items} />}
+            {items?.length && <ItemSearchResults items={items} />}
         </>
     );
 };
