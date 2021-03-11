@@ -14,8 +14,8 @@ export interface SearchData {
     categories?: IBreadcumbSectionProps[];
 }
 
-const ItemSearchContaier: React.FunctionComponent = () => {
-    const [loading, setLoading] = React.useState<boolean>(false);
+const ItemSearchContainer: React.FunctionComponent = () => {
+    const [loading, setLoading] = React.useState<boolean>(true);
     const [error, setError] = React.useState<string | undefined>(undefined);
     const [data, setData] = React.useState<SearchData | undefined>(undefined);
     
@@ -36,7 +36,7 @@ const ItemSearchContaier: React.FunctionComponent = () => {
         axios.get(url).then((res: AxiosResponse) => {
             const { data: { items, categories: stringCategories } } = res;
             const categories: IBreadcumbSectionProps[] = parseBreadcumbStrings(stringCategories);
-            setData({ items, categories: categories });
+            setData({ items, categories });
         }).catch((error: AxiosError) => {
             setError(error.message);
         }).then(() => {
@@ -59,4 +59,4 @@ const ItemSearchContaier: React.FunctionComponent = () => {
     );
 };
 
-export default ItemSearchContaier;
+export default ItemSearchContainer;

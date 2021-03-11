@@ -10,7 +10,7 @@ import Alert from '../../../components/alert/alert';
 const ItemDetailContainer: React.FunctionComponent = () => {
     const { id } = useParams() as IItemsData;
     
-    const [loading, setLoading] = React.useState<boolean>(false);
+    const [loading, setLoading] = React.useState<boolean>(true);
     const [error, setError] = React.useState<string| undefined>(undefined);
     const [data, setData] = React.useState<IItemsData | undefined>(undefined);
 
