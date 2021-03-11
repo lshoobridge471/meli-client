@@ -7,7 +7,7 @@ import './index.scss'
 
 export const rootElement = querySelector('#root');
 
-export const renderApp = (element: HTMLElement | null) => {
+export const renderApp = (element: HTMLElement | null): void=> {
 	render(
 		<BrowserRouter>
 			<MainApp />
