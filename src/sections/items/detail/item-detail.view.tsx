@@ -28,7 +28,7 @@ const ItemDetailView: React.FunctionComponent<IItemDetailProps> = (props: IItemD
             <div className="Item--Detail">
                 <div className="Item--Detail--Card">
                     <div className="Item--Detail--Card--Image">
-                        <img src={picture} />
+                        <img src={picture} alt={title} />
                     </div>
                     <div className="Item--Detail--Card--Content">
                         <div className="Item--Detail--Card--Content--Header">

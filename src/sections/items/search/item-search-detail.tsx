@@ -11,7 +11,7 @@ const ItemSearchDetail: React.FunctionComponent<IItemsData> = (props: IItemsData
     return (
         <div className="Items--Results--Card" key={uniqueKey}>
             <div className="Items--Results--Card--Image">
-                <img src={picture} />
+                <img src={picture} alt={title} />
             </div>
             <div className="Items--Results--Card--Content">
                 <div className="Items--Results--Card--Content--Subtitle">

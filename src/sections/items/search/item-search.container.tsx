@@ -8,6 +8,7 @@ import { IItemsData } from '../types/types';
 import Loading from '../../../components/loading/loading';
 import Alert from '../../../components/alert/alert';
 import { parseBreadcumbStrings } from '../utils/utils';
+import { Helmet } from "react-helmet";
 
 export interface SearchData {
     items: IItemsData[];
@@ -52,6 +53,9 @@ const ItemSearchContainer: React.FunctionComponent = () => {
 
     return (
         <div className="Items">
+            <Helmet htmlAttributes={{ lang : 'es' }}>
+                <title>{`MercadoLibre - Buscar: ${searchString}`}</title>
+            </Helmet>
             {loading && <Loading fontSize={50} />}
             {error && <Alert className="alertBannerPadding" banner type="warning" message={error} showIcon />}
             {(!loading && !error) && <ItemSearchView items={data?.items} categories={data?.categories} />}
