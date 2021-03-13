@@ -15,7 +15,7 @@ describe('sections/items/item-detail.container test suite', () => {
       jest.clearAllMocks();
     });
     
-    it.skip('should render component correctly', async () => {
+    it('should render component correctly', async () => {
         const mockProps: IItemsData = {
             data: {
                 picture: "pictureurl",

@@ -16,7 +16,7 @@ describe('sections/items/item-search.container test suite', () => {
       jest.clearAllMocks();
     });
     
-    it.skip('should render component correctly', async () => {
+    it('should render component correctly', async () => {
         const mockProps = {
             data: {
                 items: [{

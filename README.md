@@ -17,6 +17,7 @@ El sitio contiene las siguientes caracteristicas instaladas:
 - **Axios**: cliente HTTP.
 - **Eslint**: linter que examina la sintaxis del codigo y permite corregir.
 - **Husky**: analizador de commits/push para ejecutar comandos antes de realizar dichas acciones (en nuestro caso, lo aplicamos sobre commit y push, se analiza el codigo y se ejecutan los tests).
+- **Helmet**: Libreria para manejo del HEAD para posisionamiento en buscadores (SEO).
 
 ## Contenido
 
@@ -41,6 +42,7 @@ Crear una copia con el nombre ```.env``` y configurar lo que creamos necesario:
 ENVIRONMENT=development # Entorno (development/production)
 API_URL=http://localhost:8080 # URL donde tenemos levantado el proyecto la API.
 PRODUCTS_LIST_LIMIT=5 # Cantidad de productos para mostrar en la busqueda.
+META_KEYWORDS=keyword1,keyword2,keyword3 # Keywords a incluir por defecto para SEO.
 ```
 
 ## Comandos
