@@ -1,7 +1,7 @@
 import * as React from 'react';
 import axios, { AxiosResponse, AxiosError } from 'axios';
 import { useLocation } from 'react-router';
-import { getQueryParam, parseURLMELISearch } from 'utils/utils';
+import { getQueryParam, parseStringToKeywords, parseURLMELISearch } from 'utils/utils';
 import ItemSearchView from './item-search.view';
 import { IBreadcumbSectionProps } from 'components/breadcumb/breadcumb';
 import { IItemsData } from '../types/types';
@@ -54,6 +54,7 @@ const ItemSearchContainer: React.FunctionComponent = () => {
     return (
         <div className="Items">
             <Helmet htmlAttributes={{ lang : 'es' }}>
+                {searchString && <meta name="keywords" content={`${CONFIG.META_KEYWORDS},${parseStringToKeywords(searchString)}`} />}
                 <title>{`MercadoLibre - Buscar: ${searchString}`}</title>
             </Helmet>
             {loading && <Loading fontSize={50} />}

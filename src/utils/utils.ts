@@ -20,3 +20,6 @@ export const getProductUniqueKey = (product: IItemsData): string=> {
     const {  price: { amount }, id} = product;
     return `${id}_${amount}`;
 };
+
+// Split string and join
+export const parseStringToKeywords = (value: string, splitCharacter: string=' ', joinCharacter: string=',') => value.split(splitCharacter).join(joinCharacter);

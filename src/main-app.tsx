@@ -12,6 +12,7 @@ const { Header, Content } = Layout;
 
 import * as routes from './routes';
 import SearchComponent from './components/search/search';
+import { Helmet } from 'react-helmet';
 
 export interface IMainAppState {
   search: string;
@@ -28,6 +29,21 @@ const MainApp = () => {
 
   return (
     <>
+      <Helmet htmlAttributes={{ lang : 'es' }}>
+          <meta charSet="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+          <meta name="keywords" content={CONFIG.META_KEYWORDS} />
+          <meta name="description" content="Buscador de MercadoLibre Argentina." />
+          <meta name="author" content="Lucas Shoobridge" />
+          <meta name="copyright" content="Lucas Shoobridge" />
+          <meta name="robots" content="index, follow" />
+          <meta http-equiv="content-type" content="text/html;UTF-8" />
+          <meta http-equiv="cache-control" content="no-cache" />
+          <meta http-equiv="content-language" content="es" />
+          <meta http-equiv="revisit-after" content="1 days" />
+          <title>MercadoLibre - Buscador</title>
+      </Helmet>
       <Layout className="Layout">
         <Header className="Layout--Header">
           <div className="Layout--Header--Container">

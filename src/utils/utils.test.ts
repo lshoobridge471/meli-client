@@ -1,5 +1,5 @@
 import { IItemsData } from "sections/items/types/types";
-import { getProductUniqueKey, getQueryParam, parseURLMELIItemDetail, parseURLMELISearch, querySelector } from "./utils";
+import { getProductUniqueKey, getQueryParam, parseStringToKeywords, parseURLMELIItemDetail, parseURLMELISearch, querySelector } from "./utils";
 
 describe('utils test suite', () => {
     const querySelectorMock = jest.fn();
@@ -42,5 +42,12 @@ describe('utils test suite', () => {
         const productUniqueKeyParsed: string = getProductUniqueKey(productMock);
         const productUniqueKey = `${productMock.id}_${productMock.price.amount}`;
         expect(productUniqueKeyParsed).toBe(productUniqueKey);
+    });
+
+    it('parseStringToKeywords check', () => {
+        const value = "Producto de prueba";
+        const parsedTexto = parseStringToKeywords(value);
+        const parsedTextMock = 'Producto,de,prueba';
+        expect(parsedTexto).toEqual(parsedTextMock);
     });
 });

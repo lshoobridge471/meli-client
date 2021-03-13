@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useParams } from 'react-router';
-import { parseURLMELIItemDetail } from 'utils/utils';
+import { parseStringToKeywords, parseURLMELIItemDetail } from 'utils/utils';
 import { IItemsData } from '../types/types';
 import ItemDetailView from './item-detail.view';
 import axios, { AxiosError, AxiosResponse } from 'axios';
@@ -41,6 +41,7 @@ const ItemDetailContainer: React.FunctionComponent = () => {
             {error && <Alert className="alertBannerPadding" banner type="warning" message={error} showIcon />}
             {(!loading && !error && data) && (<>
                 <Helmet htmlAttributes={{ lang : 'es' }}>
+                    <meta name="keywords" content={`${CONFIG.META_KEYWORDS},${parseStringToKeywords(data?.title)}`} />
                     <title>MercadoLibre - {data?.title}</title>
                 </Helmet>
                 <ItemDetailView data={data} />

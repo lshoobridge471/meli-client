@@ -78,6 +78,7 @@ export const common: Configuration = {
             ENVIRONMENT: JSON.stringify(process.env.ENVIRONMENT),
             API_URL: JSON.stringify(process.env.API_URL),
             PRODUCTS_LIST_LIMIT: JSON.stringify(process.env.PRODUCTS_LIST_LIMIT),
+            META_KEYWORDS: JSON.stringify(process.env.META_KEYWORDS),
         },
     }),
     new HtmlWebPackPlugin({
